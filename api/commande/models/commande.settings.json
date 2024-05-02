@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "commandes",
+  "info": {
+    "name": "Commande"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "date_commande": {
+      "type": "date",
+      "required": true
+    },
+    "date_reception": {
+      "type": "date"
+    },
+    "article": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.ligne-de-commande"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "name": "Article"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "titre": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "code": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "fournisseur": {
+      "model": "fournisseur"
+    },
+    "categories": {
+      "collection": "categorie",
+      "via": "articles",
+      "dominant": true
+    },
+    "reference": {
+      "type": "string"
+    },
+    "remise": {
+      "type": "decimal"
+    },
+    "prix_achat": {
+      "type": "decimal"
+    },
+    "prix_vente": {
+      "type": "decimal"
+    },
+    "stock": {
+      "type": "integer",
+      "required": true
+    },
+    "auteur": {
+      "via": "articles",
+      "model": "auteur"
+    }
+  }
+}

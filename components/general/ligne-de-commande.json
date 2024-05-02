@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_general_ligne_de_commandes",
+  "info": {
+    "name": "Ligne de commande",
+    "icon": "angle-right"
+  },
+  "options": {},
+  "attributes": {
+    "article": {
+      "model": "article"
+    },
+    "quantite": {
+      "type": "integer",
+      "required": true
+    },
+    "prix_unitaire": {
+      "type": "decimal",
+      "required": true
+    }
+  }
+}

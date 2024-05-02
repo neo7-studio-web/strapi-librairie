@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "name": "Catégorie"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "titre": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "parent": {
+      "columnName": "parent",
+      "model": "categorie"
+    },
+    "articles": {
+      "via": "categories",
+      "collection": "article"
+    }
+  }
+}

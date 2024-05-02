@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "auteurs",
+  "info": {
+    "name": "Auteur",
+    "description": "Auteurs des ouvrages ou des ressources",
+    "icon": "user"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Nom": {
+      "type": "string",
+      "required": true
+    },
+    "articles": {
+      "collection": "article",
+      "via": "auteur"
+    }
+  }
+}
