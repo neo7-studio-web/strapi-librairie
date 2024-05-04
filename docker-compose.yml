@@ -27,7 +27,7 @@ services:
     container_name: strapiDB
     restart: unless-stopped
     env_file: stack.env
-    image: mariadb:latest
+    image: mariadb:11.3
     environment:
       MARIADB_USER: ${MARIADB_USERNAME}
       MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}
@@ -42,7 +42,7 @@ services:
       - strapi
 
   phpmyadmin:
-    image: phpmyadmin:latest
+    image: phpmyadmin:5.2.1
     restart: unless-stopped
     ports:
       - 8088:80
