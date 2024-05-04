@@ -2,7 +2,7 @@ version: "3"
 services:
   strapi:
     container_name: strapi-librairie-app
-    image: neo7studioweb/strapi-librairie:latest
+    image: neo7studioweb/strapi-librairie
     restart: unless-stopped
     env_file: stack.env
     environment:
@@ -15,6 +15,7 @@ services:
       DATABASE_SSL: 'false'
     volumes:
       - ./app:/srv/app
+
     ports:
       - 1338:1337
     networks:
